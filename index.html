@@ -1,12 +1,11 @@
 <!doctype html>
-<!-- City Ditty standalone page v12: local/GitHub-ready build -->
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="City Ditty – interactive soundscape simulation, design, learning, evaluation, and research.">
-  <title>City Ditty</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="City Ditty – interactive soundscape simulation, design, learning, evaluation, and research." name="description"/>
+<title>City Ditty</title>
+<style>
 :root {
   --cd-deep-blue: #0F3B6E;
   --cd-slate-blue: #4F6B8A;
@@ -238,15 +237,167 @@ a:hover { color: var(--cd-blue-green); }
   #project_details .card .footer { display: block; }
   #project_details .card .footer p { margin-top: 4px; }
 }
+
+
+/* v13: related-research notes, access status, support/recognition, and publication cards */
+#project_details .city-ditty-related-research {
+  margin-top: 24px;
+  padding: 16px 18px;
+  border-left: 4px solid var(--cd-blue-green);
+  background: var(--cd-teal-soft);
+}
+#project_details .city-ditty-related-research-title {
+  margin: 0 0 8px;
+  color: var(--cd-deep-blue);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+}
+#project_details .city-ditty-related-research ul {
+  margin: 0;
+  padding-left: 20px;
+}
+#project_details .city-ditty-related-research li {
+  margin: 7px 0;
+}
+#project_details .city-ditty-related-research a {
+  font-weight: 700;
+}
+#project_details .city-ditty-access-note {
+  max-width: 880px;
+  margin: 30px auto 0;
+  padding: 20px 22px;
+  border: 1px solid var(--cd-border);
+  border-left: 5px solid var(--cd-blue-green);
+  background: var(--cd-teal-soft);
+}
+#project_details .city-ditty-access-note:target,
+#project_details .city-ditty-publication-card:target {
+  outline: 3px solid var(--cd-blue-green);
+  outline-offset: 4px;
+}
+#project_details .city-ditty-access-label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--cd-blue-green);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+#project_details .city-ditty-full-section {
+  margin: 0 0 44px;
+}
+#project_details .city-ditty-support-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+#project_details .city-ditty-support-card {
+  padding: 22px;
+  border: 1px solid var(--cd-border);
+  background: var(--cd-soft);
+}
+#project_details .city-ditty-support-card h3 {
+  margin: 0 0 12px;
+  color: var(--cd-deep-blue);
+  font-size: 20px;
+  line-height: 1.3;
+}
+#project_details .city-ditty-support-card p:last-child,
+#project_details .city-ditty-support-card ul:last-child { margin-bottom: 0; }
+#project_details .city-ditty-recognition-list {
+  margin: 0;
+  padding-left: 20px;
+}
+#project_details .city-ditty-recognition-list li {
+  margin: 0 0 10px;
+}
+#project_details .city-ditty-publication-section {
+  width: 100%;
+  margin: 0;
+}
+#project_details .city-ditty-publication-intro {
+  max-width: 900px;
+  margin-bottom: 22px;
+}
+#project_details .city-ditty-publication-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+#project_details .city-ditty-publication-card {
+  scroll-margin-top: 28px;
+  padding: 22px;
+  border: 1px solid var(--cd-border);
+  border-top: 4px solid var(--cd-deep-blue);
+  background: #fff;
+}
+#project_details .city-ditty-publication-type {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--cd-blue-green);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+#project_details .city-ditty-publication-card h3 {
+  margin: 0 0 10px;
+  color: var(--cd-deep-blue);
+  font-size: 21px;
+  line-height: 1.28;
+}
+#project_details .city-ditty-publication-summary {
+  margin: 0 0 12px;
+}
+#project_details .city-ditty-publication-meta {
+  margin: 0 0 12px;
+  color: var(--cd-slate-blue);
+  font-size: 15px;
+  line-height: 1.45;
+}
+#project_details .city-ditty-publication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px 14px;
+  margin-top: 14px;
+}
+#project_details .city-ditty-publication-link {
+  font-weight: 800;
+}
+#project_details .city-ditty-publication-status {
+  color: var(--cd-slate-blue);
+  font-size: 14px;
+  font-style: italic;
+}
+#project_details .city-ditty-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid var(--cd-blue-green);
+  background: var(--cd-teal-soft);
+  color: var(--cd-deep-blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+@media (min-width: 680px) {
+  #project_details .city-ditty-support-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 900px) {
+  #project_details .city-ditty-resource-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #project_details .city-ditty-publication-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 </style>
 </head>
 <body>
-  <main id="container">
-    <div id="project_details">
-      <div class="container">
+<main id="container">
+<div id="project_details">
+<div class="container">
 <div class="city-ditty-wordmark-wrap"><img alt="City Ditty" class="city-ditty-wordmark" src="assets/images/branding/city-ditty-wordmark.png"/></div>
 <p class="description">A Virtual Reality Soundscape Simulator</p>
-
 <nav aria-label="City Ditty sections" class="city-ditty-section-nav" id="explore-city-ditty" tabindex="-1">
 <p class="city-ditty-section-nav-title">Explore City Ditty</p>
 <ul>
@@ -258,7 +409,7 @@ a:hover { color: var(--cd-blue-green); }
 <li><a href="#cross-disciplinary-communication"><span>Cross-Disciplinary Communication</span><span aria-hidden="true" class="jump-arrow">↓</span></a></li>
 <li><a href="#public-space-redesign"><span>(Re)Designing Public Spaces</span><span aria-hidden="true" class="jump-arrow">↓</span></a></li>
 <li><a href="#work-with-city-ditty"><span>Work with City Ditty</span><span aria-hidden="true" class="jump-arrow">↓</span></a></li>
-<li><a href="#demos-and-documentation"><span>Demos and Documentation</span><span aria-hidden="true" class="jump-arrow">↓</span></a></li>
+<li><a href="#support-and-recognition"><span>Support and Recognition</span><span aria-hidden="true" class="jump-arrow">↓</span></a></li><li><a href="#demos-and-documentation"><span>Demos and Documentation</span><span aria-hidden="true" class="jump-arrow">↓</span></a></li><li><a href="#selected-publications"><span>Selected Publications</span><span aria-hidden="true" class="jump-arrow">↓</span></a></li>
 </ul>
 </nav>
 <div class="card">
@@ -274,9 +425,9 @@ a:hover { color: var(--cd-blue-green); }
 <div class="about">
 <div class="col">
 <p class="text">City Ditty is an interactive soundscape simulator designed to help professionals of the built environment and other non-specialists hear, explore, and compare possible urban soundscapes. It translates soundscape information into a contextual audiovisual experience in which users can manipulate individual elements, listen to the consequences, and consider sound alongside the visual and physical design of a space.</p>
-<br>
+<br/>
 <p class="text">Its development was informed by a user-centred needs assessment targeting urban planners, designers, policymakers, and other city makers, followed by a series of usability and stakeholder studies. Early participants were able to learn about soundscapes and produce simple designs in less than an hour. City Ditty has since expanded across desktop and head-mounted virtual reality platforms and into several complementary forms of use.</p>
-</br></div>
+</div>
 <div class="col">
 <ul style="padding-left: 24px; list-style-position: outside;">
 <li style="margin-bottom: 12px;"><strong>From awareness to practice:</strong> Help professionals recognize sound-related concerns, explore alternatives, and communicate possible interventions.</li>
@@ -299,15 +450,10 @@ a:hover { color: var(--cd-blue-green); }
 <li style="margin-bottom: 12px;"><strong>Compare alternatives:</strong> Move between different interventions or design possibilities within the same environment.</li>
 <li><strong>Prototype early ideas:</strong> Explore promising directions before undertaking detailed acoustic analysis or implementation.</li>
 </ul>
-<div style="margin-top: 20px;">
-<p class="text"><em>Related research:</em></p>
-<p class="text" style="margin-top: 12px;">
-<a class="list-links" href="https://doi.org/10.3390/app13031611" rel="noopener noreferrer" target="_blank">Yanaky, R., Tyler, D., &amp; Guastavino, C. (2023). City Ditty: An Immersive Soundscape Sketchpad for Professionals of the Built Environment. <i>Applied Sciences</i>, 13(3), 1611.</a>
-</p>
-<p class="text" style="margin-top: 12px;">
-<a class="list-links" href="https://jcaa.caa-aca.ca/index.php/jcaa/article/view/4183" rel="noopener noreferrer" style="display: inline; margin-bottom: 0;" target="_blank">Yanaky, R., &amp; Guastavino, C. (2024). Realistic Enough? Design Considerations for Soundscape Simulators. <i>Canadian Acoustics</i>, 52(1). <span style="color: #c00000; display: inline; margin-bottom: 0;">2nd Best presentation in architectural acoustics award.</span></a>
-</p>
-</div>
+<aside aria-label="Related research" class="city-ditty-related-research">
+<p class="city-ditty-related-research-title">Related research</p>
+<ul><li><a href="#pub-city-ditty-2023">Initial City Ditty evaluation</a> — examined soundscape learning and early design by non-specialists.</li><li><a href="#pub-realistic-enough-2024">Soundscape simulator design considerations</a> — discusses realism and design trade-offs for interactive soundscape simulation.</li></ul>
+</aside>
 </section>
 <section class="col city-ditty-mobile-separated">
 <h3 class="button city-ditty-anchor-target" id="guided-learning" style="margin-bottom: 16px;" tabindex="-1">Guided Soundscape Learning</h3>
@@ -319,13 +465,10 @@ a:hover { color: var(--cd-blue-green); }
 <li style="margin-bottom: 12px;"><strong>Flexible guidance:</strong> Follow the suggested activities while remaining free to investigate other possibilities.</li>
 <li><strong>Learning through design:</strong> Progress from recognizing and understanding soundscape elements to applying ideas and creating simple alternatives.</li>
 </ul>
-<div style="margin-top: 20px;">
-<p class="text"><em>Related research:</em></p>
-<p class="text" style="margin-top: 12px;">
-<a class="list-links" href="https://doi.org/10.3390/app13031611" rel="noopener noreferrer" target="_blank">Yanaky, R., Tyler, D., &amp; Guastavino, C. (2023). City Ditty: An Immersive Soundscape Sketchpad for Professionals of the Built Environment. <i>Applied Sciences</i>, 13(3), 1611.</a>
-</p>
-<p class="text" style="margin-top: 12px;">Yanaky, R., &amp; Guastavino, C. (2026, September 8-12). Translating Soundscapes into Practice Using Virtual Reality: City Makers’ Insights on Interactive Soundscape Simulation. <i>Documenta of Forum Acusticum 2026</i>. Forum Acusticum 2026, Sept. 8-12, Graz, Austria. <span style="color: #c00000;">Invited paper.</span></p>
-</div>
+<aside aria-label="Related research" class="city-ditty-related-research">
+<p class="city-ditty-related-research-title">Related research</p>
+<ul><li><a href="#pub-city-ditty-2023">Initial City Ditty evaluation</a> — reports early use of guided activities for soundscape learning and simple design.</li><li><a href="#pub-stakeholder-2026">City-maker stakeholder study</a> — explores hands-on soundscape learning and how participants connected the experience to professional practice.</li></ul>
+</aside>
 </section>
 </div>
 <p class="city-ditty-back-link"><a href="#explore-city-ditty">↑ Explore City Ditty</a></p>
@@ -349,13 +492,10 @@ a:hover { color: var(--cd-blue-green); }
 <li style="margin-bottom: 12px;"><strong>Consistent study delivery:</strong> Present conditions and activities in a predetermined or randomized order across participants.</li>
 <li><strong>Custom content:</strong> Adding environments, objects, or other assets that are not already included in the City Ditty library currently requires developer support.</li>
 </ul>
-<div style="margin-top: 20px;">
-<p class="text"><em>Related research:</em></p>
-<p class="text" style="margin-top: 12px;">
-<a class="list-links" href="https://www.researchgate.net/publication/390805961_Effect_of_music_on_the_Quality_of_Urban_Public_Experience_a_virtual_reality_experiment" rel="noopener noreferrer" target="_blank">Miao, C., Yanaky, R., &amp; Guastavino, C. (2025, May 27-30, 2025). Effect of music on the Quality of Urban Public Experience: a virtual reality experiment. 56th Annual Conference of the Environmental Design Research Association (EDRA), Halifax, Nova Scotia.</a>
-</p>
-<p class="text" style="margin-top: 12px;"><strong>Full paper:</strong> In preparation.</p>
-</div>
+<aside aria-label="Related research" class="city-ditty-related-research">
+<p class="city-ditty-related-research-title">Related research</p>
+<ul><li><a href="#pub-music-evaluation-2025">Public-space music experiment</a> — demonstrates City Ditty as a platform for a comparative VR study; an expanded paper is in preparation.</li></ul>
+</aside>
 </section>
 <section class="col city-ditty-mobile-separated">
 <h3 class="button city-ditty-anchor-target" id="human-soundscape-interaction" style="margin-bottom: 16px;" tabindex="-1">Human–Soundscape Interaction</h3>
@@ -367,13 +507,10 @@ a:hover { color: var(--cd-blue-green); }
 <li style="margin-bottom: 12px;"><strong>User experience:</strong> Investigate usability, engagement, presence,  and listening experience.</li>
 <li><strong>Broader participation:</strong> Explore how interactive technologies can make soundscape design more accessible to people with different expertise and lived experience.</li>
 </ul>
-<div style="margin-top: 20px;">
-<p class="text"><em>Related research:</em></p>
-<p class="text" style="margin-top: 12px;">Yanaky, R., Toffa, S., &amp; Guastavino, C. (2026, Sept 8-12). Interacting with soundscapes in Virtual Reality: desktop vs. immersive VR. <i>Documenta of Forum Acusticum 2026</i>. Forum Acusticum 2026, Sept. 8-12, Graz, Austria. <span style="color: #c00000;">Invited paper.</span></p>
-<p class="text" style="margin-top: 12px;">
-<a class="list-links" href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003490678-8/sound-based-interaction-richard-yanaky-charles-reimer-val%C3%A9rian-fraisse-marcelo-wanderley-catherine-guastavino" rel="noopener noreferrer" target="_blank">Yanaky, R., Reimer, P. J. C., Fraisse, V., Wanderley, M., &amp; Guastavino, C. (2024). Sound-Based Interaction. In C. Stephanidis &amp; G. Salvendy (Eds.), <i>Human Computer Interaction: Interaction Technologies and Techniques</i>. CRC Press.</a>
-</p>
-</div>
+<aside aria-label="Related research" class="city-ditty-related-research">
+<p class="city-ditty-related-research-title">Related research</p>
+<ul><li><a href="#pub-desktop-hmd-2026">Desktop–HMD comparison</a> — compares interaction, presence, spatial understanding, engagement, usability, and listening experience across platforms.</li><li><a href="#pub-sound-based-interaction-2024">Sound-based interaction chapter</a> — provides broader HCI context for designing and studying interaction through sound.</li></ul>
+</aside>
 </section>
 </div>
 <p class="city-ditty-back-link"><a href="#explore-city-ditty">↑ Explore City Ditty</a></p>
@@ -397,13 +534,10 @@ a:hover { color: var(--cd-blue-green); }
 <li style="margin-bottom: 12px;"><strong>Clarify needs and decisions:</strong> Help non-specialists communicate questions and requirements more precisely to sound experts.</li>
 <li><strong>Complement specialist expertise:</strong> Support earlier and more productive collaboration without replacing acoustical analysis or professional judgment.</li>
 </ul>
-<div style="margin-top: 20px;">
-<p class="text"><em>Related research:</em></p>
-<p class="text" style="margin-top: 12px;">Yanaky, R., &amp; Guastavino, C. (2026, September 8-12). Translating Soundscapes into Practice Using Virtual Reality: City Makers’ Insights on Interactive Soundscape Simulation. <i>Documenta of Forum Acusticum 2026</i>. Forum Acusticum 2026, Sept. 8-12, Graz, Austria. <span style="color: #c00000;">Invited paper.</span></p>
-<p class="text" style="margin-top: 12px;">
-<a class="list-links" href="https://www.researchgate.net/publication/374750772_Exploring_the_use_of_soundscape_sketchpads_with_professionals" rel="noopener noreferrer" target="_blank">Yanaky, R., Grazioli, G., Zhang, Y.-Y., &amp; Guastavino, C. (2023). Exploring the use of soundscape sketchpads with professionals. <i>INTER-NOISE and NOISE-CON Congress and Conference Proceedings</i>, Chiba, Japan, August 20-23, 2023.</a>
-</p>
-</div>
+<aside aria-label="Related research" class="city-ditty-related-research">
+<p class="city-ditty-related-research-title">Related research</p>
+<ul><li><a href="#pub-stakeholder-2026">City-maker stakeholder study</a> — examines communication, collaboration, workflow integration, and possible adoption in professional practice.</li><li><a href="#pub-professional-sketchpads-2023">Professional soundscape-sketchpad study</a> — presents early professional feedback on interactive soundscape tools and possible workplace use.</li></ul>
+</aside>
 </section>
 <section class="col city-ditty-mobile-separated">
 <h3 class="button city-ditty-anchor-target" id="public-space-redesign" style="margin-bottom: 16px;" tabindex="-1">(Re)Designing Public Spaces</h3>
@@ -415,13 +549,10 @@ a:hover { color: var(--cd-blue-green); }
 <li style="margin-bottom: 12px;"><strong>Integrate the project content:</strong> Their environment, recordings, and 3D models were incorporated into City Ditty with integration guidance and targeted adjustments to the software.</li>
 <li><strong>Explore redesign alternatives:</strong> Multidisciplinary student teams used the completed simulation during design competitions to develop and examine alternative proposals for the park.</li>
 </ul>
-<div style="margin-top: 20px;">
-<p class="text"><em>Related research:</em></p>
-<p class="text" style="margin-top: 12px;">Kogan, P., Fuentes, L., Yanaky, R., Verdugo, D., Saavedra, I., Monsalve, J., Hidalgo, P., Vega, B., Bild, E., &amp; Guastavino, C. (2026, Sept 8-12). From Soundwalks to Auralisation: A Participatory Urban Soundscape Design Workflow Using City Ditty. <i>Documenta of Forum Acusticum 2026</i>. Forum Acusticum 2026, Sept. 8-12, Graz, Austria.</p>
-<p class="text" style="margin-top: 12px;">
-<a class="list-links" href="https://www.researchgate.net/publication/393770459_Application_of_the_City_Ditty_soundscape_tool_in_an_interdisciplinary_urban_park_design_competition" rel="noopener noreferrer" target="_blank">Yanaky, R., Fuentes, L., Verdugo, D., Monsalve, J., Vega, B., Villavicencio, C., Kogan, P., Guastavino, C. (2025, August 24-27). Application of the City Ditty soundscape tool in an interdisciplinary urban park design competition. <i>INTER-NOISE and NOISE-CON Congress and Conference Proceedings</i>. Sao Paulo, Brazil, Institute of Noise Control Engineering: 12.</a>
-</p>
-</div>
+<aside aria-label="Related research" class="city-ditty-related-research">
+<p class="city-ditty-related-research-title">Related research</p>
+<ul><li><a href="#pub-soundwalks-auralisation-2026">Participatory design workflow</a> — follows a site-specific process from soundwalks and recording through simulation and redesign.</li><li><a href="#pub-park-competition-2025">Urban park design competition</a> — documents the application of City Ditty in an interdisciplinary redesign of Parque O’Higgins.</li></ul>
+</aside>
 </section>
 </div>
 <p class="city-ditty-back-link"><a href="#explore-city-ditty">↑ Explore City Ditty</a></p>
@@ -447,13 +578,16 @@ a:hover { color: var(--cd-blue-green); }
 <li><strong>Research and development partnerships:</strong> Investigate new environments, interaction methods, or applications for the platform.</li>
 </ul>
 </section>
+</div><div class="city-ditty-access-note city-ditty-anchor-target" id="city-ditty-access" tabindex="-1">
+<span class="city-ditty-access-label">SOFTWARE ACCESS</span>
+<p class="text"><strong>City Ditty is not yet available as a public download.</strong> It is currently being used in ongoing research. If you are interested in using it for a research, educational, or city project, please get in touch to discuss possible access or collaboration.</p>
 </div>
 <div class="about" style="margin-top: 30px; display: block; text-align: center;">
 <section class="col" style="max-width: 760px; margin: 0 auto;">
 <p class="text"><strong>Interested in using City Ditty for a city project or research study?</strong></p>
-<br>
+<br/>
 <p class="text"><i>Please contact: <a href="#" id="richard-email-link" title="Email Richard Yanaky">Richard Yanaky</a> or <a href="https://www.mcgill.ca/sis/people/faculty/guastavino" rel="noopener noreferrer" target="_blank">Catherine Guastavino</a></i></p>
-</br></section>
+</section>
 </div>
 <script>
                     (function () {
@@ -467,12 +601,29 @@ a:hover { color: var(--cd-blue-green); }
                         });
                     }());
                 </script>
-<hr class="city-ditty-section-divider"/>
-<div class="about">
-<div class="col">
+<hr class="city-ditty-section-divider"/><section class="city-ditty-full-section">
+<h4 class="about-title city-ditty-anchor-target" id="support-and-recognition" tabindex="-1">Support and Recognition</h4>
+<p class="city-ditty-publication-intro">City Ditty and its related research have developed with support from research funding, institutional programs, and recognition received through presentations and publications.</p>
+<div class="city-ditty-support-grid">
+<div class="city-ditty-support-card">
+<h3>Project support</h3>
+<p>This project has been supported in some form by all three sectors of <a href="https://frq.gouv.qc.ca/en/" rel="noopener noreferrer" target="_blank">Fonds de recherche du Québec</a> (Society &amp; Culture, Nature and technologies, and Health); the <a href="https://www.cirmmt.org/" rel="noopener noreferrer" target="_blank">Centre for Interdisciplinary Research in Music Media and Technology (CIRMMT)</a>; and a <a href="https://www.mcgill.ca/wolfechair/wolfe-fellows" rel="noopener noreferrer" target="_blank">Wolfe Graduate Fellowship in Scientific and Technological Literacy</a>.</p>
+</div>
+<div class="city-ditty-support-card">
+<h3>Selected recognition</h3>
+<ul class="city-ditty-recognition-list">
+<li><strong>2026 · Forum Acusticum:</strong> <a href="#pub-stakeholder-2026">Invited paper</a> on translating interactive soundscape simulation into professional practice.</li>
+<li><strong>2026 · Forum Acusticum:</strong> <a href="#pub-desktop-hmd-2026">Invited paper</a> comparing desktop and immersive VR interaction with soundscapes.</li>
+<li><strong>2024 · Canadian Acoustics:</strong> <a href="#pub-realistic-enough-2024">2nd Best presentation in architectural acoustics</a> for <em>Realistic Enough?</em></li>
+<li><strong>2024 · Réseau AIRS:</strong> Best presentation award for <em>Using virtual reality to integrate sound considerations in city-making</em>.</li>
+<li><strong>2023 · CIRMMT/OIRCM/BRAMS Student Symposium:</strong> Best poster award for <em>City Ditty – First evaluations of a new virtual reality soundscape sketchpad</em>.</li>
+<li><strong>2022 · EBSI-SIS Student Symposium:</strong> Best presentation award for <em>Addressing transdisciplinary challenges through technology: Immersive soundscape planning tools</em>.</li>
+</ul>
+</div>
+</div>
+</section><p class="city-ditty-back-link"><a href="#explore-city-ditty">↑ Explore City Ditty</a></p><hr class="city-ditty-section-divider"/><section class="city-ditty-full-section">
 <h4 class="about-title city-ditty-anchor-target" id="demos-and-documentation" tabindex="-1">Demos and Documentation</h4>
-<br>
-<p class="city-ditty-resource-intro">Learn more about City Ditty through recorded demonstrations and presentations, or consult practical guidance for using the software and analyzing the data it collects.</p>
+<p class="city-ditty-resource-intro">Learn more about City Ditty through recorded demonstrations and presentations, consult practical guidance for using the software, or review its current access status.</p>
 <div class="city-ditty-resource-list">
 <a class="city-ditty-resource-card" href="https://www.youtube.com/watch?v=mOaO1aq21xE&amp;list=PLIlbMTlgR90J2stZScpJ-oqi1_5Hj4RzY" rel="noopener noreferrer" target="_blank">
 <span class="city-ditty-resource-label">WATCH</span>
@@ -486,28 +637,104 @@ a:hover { color: var(--cd-blue-green); }
 <span class="city-ditty-resource-description">Find guidance on City Ditty’s modes and controls and on preparing content for integration. The documentation also explains how to interpret and analyze position-tracking, task-response, and user-action logs.</span>
 <span class="city-ditty-resource-cta">Open the documentation →</span>
 </a>
+<a class="city-ditty-resource-card" href="#city-ditty-access">
+<span class="city-ditty-resource-label">ACCESS</span>
+<span class="city-ditty-resource-title">Software access</span>
+<span class="city-ditty-resource-description">City Ditty is not yet available as a public download. Research, educational, and project-based access can be discussed directly.</span>
+<span class="city-ditty-resource-cta">Contact us about access →</span>
+</a>
 </div>
-</br></div>
-<div class="col city-ditty-mobile-separated">
-<h4 class="about-title">Other selected works</h4>
-<br>
-<p class="text">
-<a class="list-links" href="https://doi.org/10.1145/3756884.3768399" rel="noopener noreferrer" target="_blank">Yanaky, R., &amp; Guastavino, C. (2025, Nov 12-14). Virtual Reality for Urban Soundscape Design: Exploring knowledge sharing, creation, and workplace integration. Demo and poster presented at the 31st ACM Symposium on Virtual Reality Software and Technology, Montreal, Canada. https://doi.org/10.1145/3756884.3768399</a>
-</p>
-<p class="text">
-<a class="list-links" href="https://doi.org/10.13140/RG.2.2.28391.61600" rel="noopener noreferrer" target="_blank">Yanaky, R. and Guastavino, C. (2025, July 22-25). From Emerging Issue to Design Imperative: Sound, Health, and Human-Centered Cities. Poster presented at ACM COMPASS, Toronto, Canada. https://doi.org/10.13140/RG.2.2.28391.61600</a>
-</p>
-<p class="text">
-<a class="list-links" href="https://jcaa.caa-aca.ca/index.php/jcaa/article/view/4180" rel="noopener noreferrer" target="_blank">Fraisse, V., Tarlao, C., Yanaky, R., &amp; Guastavino, C. (2024). One Size Doesn't Fit All: Three Tools For Soundscape Simulation. <i>Canadian Acoustics</i>, 52(1). https://jcaa.caa-aca.ca/index.php/jcaa/article/view/4180</a>
-</p>
-<p class="text" style="margin-bottom: 16px;">Yanaky, R., &amp; Guastavino, C. (2024, November). Using virtual reality to integrate sound considerations in city-making. Congrès du Réseau AIRS 2024, Montreal, QC, Canada. <span style="color: #c00000; display: inline; margin-bottom: 0;">Best presentation award.</span></p>
-<p class="text" style="margin-bottom: 16px;">Yanaky, R., &amp; Guastavino, C. (2023, March). City Ditty – First evaluations of a new virtual reality soundscape sketchpad [Poster presentation]. 5th CIRMMT/OIRCM/BRAMS Student Symposium, Montreal, QC, Canada. <span style="color: #c00000; display: inline; margin-bottom: 0;">Best poster award.</span></p>
-<p class="text" style="margin-bottom: 16px;">Yanaky, R. (2022, March). Addressing transdisciplinary challenges through technology: Immersive soundscape planning tools. Paper presented at the 14th annual EBSI-SIS Student Symposium in Information Science, Montreal, QC, Canada. <span style="color: #c00000; display: inline; margin-bottom: 0;">Best presentation award.</span></p>
-</br></div>
+</section><p class="city-ditty-back-link"><a href="#explore-city-ditty">↑ Explore City Ditty</a></p><hr class="city-ditty-section-divider"/><section class="city-ditty-full-section city-ditty-publication-section">
+<h4 class="about-title city-ditty-anchor-target" id="selected-publications" tabindex="-1">Selected Publications</h4>
+<p class="city-ditty-publication-intro">Selected research associated with City Ditty is presented here in a web-friendly format. Links from the sections above lead directly to the most relevant item.</p>
+<div class="city-ditty-publication-grid">
+<article class="city-ditty-publication-card" id="pub-stakeholder-2026">
+<span class="city-ditty-publication-type">Conference paper · 2026</span>
+<h3>Translating Soundscapes into Practice Using Virtual Reality: City Makers’ Insights on Interactive Soundscape Simulation</h3>
+<p class="city-ditty-publication-summary">Stakeholder study examining how city makers experienced guided soundscape activities and how they envisioned interactive simulation supporting education, communication, workflows, and professional practice.</p>
+<p class="city-ditty-publication-meta">Yanaky, R., &amp; Guastavino, C. · <em>Documenta of Forum Acusticum 2026</em> · Graz, Austria</p>
+<div class="city-ditty-publication-actions"><span class="city-ditty-badge">Invited paper</span><span class="city-ditty-publication-status">Publication link to be added</span></div>
+</article>
+<article class="city-ditty-publication-card" id="pub-desktop-hmd-2026">
+<span class="city-ditty-publication-type">Conference paper · 2026</span>
+<h3>Interacting with Soundscapes in Virtual Reality: Desktop vs. Immersive VR</h3>
+<p class="city-ditty-publication-summary">Comparative study of desktop and head-mounted VR versions of City Ditty, examining interaction, presence, spatial understanding, engagement, usability, and listening experience.</p>
+<p class="city-ditty-publication-meta">Yanaky, R., Toffa, S., &amp; Guastavino, C. · <em>Documenta of Forum Acusticum 2026</em> · Graz, Austria</p>
+<div class="city-ditty-publication-actions"><span class="city-ditty-badge">Invited paper</span><span class="city-ditty-publication-status">Publication link to be added</span></div>
+</article>
+<article class="city-ditty-publication-card" id="pub-soundwalks-auralisation-2026">
+<span class="city-ditty-publication-type">Conference paper · 2026</span>
+<h3>From Soundwalks to Auralisation: A Participatory Urban Soundscape Design Workflow Using City Ditty</h3>
+<p class="city-ditty-publication-summary">Describes a participatory, site-specific workflow connecting soundwalks, local recordings, virtual reconstruction, soundscape simulation, and urban redesign activities.</p>
+<p class="city-ditty-publication-meta">Kogan, P., Fuentes, L., Yanaky, R., Verdugo, D., Saavedra, I., Monsalve, J., Hidalgo, P., Vega, B., Bild, E., &amp; Guastavino, C. · <em>Documenta of Forum Acusticum 2026</em></p>
+<div class="city-ditty-publication-actions"><span class="city-ditty-publication-status">Publication link to be added</span></div>
+</article>
+<article class="city-ditty-publication-card" id="pub-park-competition-2025">
+<span class="city-ditty-publication-type">Conference paper · 2025</span>
+<h3>Application of the City Ditty Soundscape Tool in an Interdisciplinary Urban Park Design Competition</h3>
+<p class="city-ditty-publication-summary">Documents the use of a site-specific City Ditty simulation to support multidisciplinary student teams developing redesign proposals for Parque O’Higgins in Santiago.</p>
+<p class="city-ditty-publication-meta">Yanaky, R., Fuentes, L., Verdugo, D., Monsalve, J., Vega, B., Villavicencio, C., Kogan, P., &amp; Guastavino, C. · INTER-NOISE 2025 · São Paulo, Brazil</p>
+<div class="city-ditty-publication-actions"><a class="city-ditty-publication-link" href="https://www.researchgate.net/publication/393770459_Application_of_the_City_Ditty_soundscape_tool_in_an_interdisciplinary_urban_park_design_competition" rel="noopener noreferrer" target="_blank">View publication ↗</a></div>
+</article>
+<article class="city-ditty-publication-card" id="pub-music-evaluation-2025">
+<span class="city-ditty-publication-type">Conference paper · 2025</span>
+<h3>Effect of Music on the Quality of Urban Public Experience: A Virtual Reality Experiment</h3>
+<p class="city-ditty-publication-summary">Uses City Ditty to compare public-space soundscape conditions in VR and demonstrates how designed environments can be reused as controlled experimental scenarios.</p>
+<p class="city-ditty-publication-meta">Miao, C., Yanaky, R., &amp; Guastavino, C. · 56th Annual Conference of the Environmental Design Research Association (EDRA) · Halifax, Canada</p>
+<div class="city-ditty-publication-actions"><a class="city-ditty-publication-link" href="https://www.researchgate.net/publication/390805961_Effect_of_music_on_the_Quality_of_Urban_Public_Experience_a_virtual_reality_experiment" rel="noopener noreferrer" target="_blank">View conference paper ↗</a><span class="city-ditty-publication-status">Expanded paper in preparation</span></div>
+</article>
+<article class="city-ditty-publication-card" id="pub-vrst-2025">
+<span class="city-ditty-publication-type">Demo &amp; poster · 2025</span>
+<h3>Virtual Reality for Urban Soundscape Design: Exploring Knowledge Sharing, Creation, and Workplace Integration</h3>
+<p class="city-ditty-publication-summary">Presents City Ditty as an interactive VR platform for soundscape design, knowledge sharing, and consideration of possible workplace integration.</p>
+<p class="city-ditty-publication-meta">Yanaky, R., &amp; Guastavino, C. · 31st ACM Symposium on Virtual Reality Software and Technology (VRST) · Montréal, Canada</p>
+<div class="city-ditty-publication-actions"><a class="city-ditty-publication-link" href="https://doi.org/10.1145/3756884.3768399" rel="noopener noreferrer" target="_blank">View publication ↗</a></div>
+</article>
+<article class="city-ditty-publication-card" id="pub-compass-2025">
+<span class="city-ditty-publication-type">Poster · 2025</span>
+<h3>From Emerging Issue to Design Imperative: Sound, Health, and Human-Centered Cities</h3>
+<p class="city-ditty-publication-summary">Positions urban sound as a human-centered design concern and connects sound-related health, lived experience, and city-making considerations.</p>
+<p class="city-ditty-publication-meta">Yanaky, R., &amp; Guastavino, C. · ACM COMPASS 2025 · Toronto, Canada</p>
+<div class="city-ditty-publication-actions"><a class="city-ditty-publication-link" href="https://doi.org/10.13140/RG.2.2.28391.61600" rel="noopener noreferrer" target="_blank">View poster ↗</a></div>
+</article>
+<article class="city-ditty-publication-card" id="pub-sound-based-interaction-2024">
+<span class="city-ditty-publication-type">Book chapter · 2024</span>
+<h3>Sound-Based Interaction</h3>
+<p class="city-ditty-publication-summary">Reviews interaction through sound within HCI, providing broader theoretical and design context for studying systems in which listening and action are closely coupled.</p>
+<p class="city-ditty-publication-meta">Yanaky, R., Reimer, P. J. C., Fraisse, V., Wanderley, M., &amp; Guastavino, C. · In <em>Human Computer Interaction: Interaction Technologies and Techniques</em> · CRC Press</p>
+<div class="city-ditty-publication-actions"><a class="city-ditty-publication-link" href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003490678-8/sound-based-interaction-richard-yanaky-charles-reimer-val%C3%A9rian-fraisse-marcelo-wanderley-catherine-guastavino" rel="noopener noreferrer" target="_blank">View chapter ↗</a></div>
+</article>
+<article class="city-ditty-publication-card" id="pub-realistic-enough-2024">
+<span class="city-ditty-publication-type">Conference paper · 2024</span>
+<h3>Realistic Enough? Design Considerations for Soundscape Simulators</h3>
+<p class="city-ditty-publication-summary">Examines design choices and trade-offs involved in creating soundscape simulators, including how much realism is useful for different purposes and users.</p>
+<p class="city-ditty-publication-meta">Yanaky, R., &amp; Guastavino, C. · <em>Canadian Acoustics</em>, 52(1)</p>
+<div class="city-ditty-publication-actions"><a class="city-ditty-publication-link" href="https://jcaa.caa-aca.ca/index.php/jcaa/article/view/4183" rel="noopener noreferrer" target="_blank">View publication ↗</a><span class="city-ditty-badge">2nd Best presentation · Architectural Acoustics</span></div>
+</article>
+<article class="city-ditty-publication-card" id="pub-three-tools-2024">
+<span class="city-ditty-publication-type">Conference paper · 2024</span>
+<h3>One Size Doesn't Fit All: Three Tools for Soundscape Simulation</h3>
+<p class="city-ditty-publication-summary">Compares complementary approaches to soundscape simulation and highlights how different tools can support different forms of exploration and research.</p>
+<p class="city-ditty-publication-meta">Fraisse, V., Tarlao, C., Yanaky, R., &amp; Guastavino, C. · <em>Canadian Acoustics</em>, 52(1)</p>
+<div class="city-ditty-publication-actions"><a class="city-ditty-publication-link" href="https://jcaa.caa-aca.ca/index.php/jcaa/article/view/4180" rel="noopener noreferrer" target="_blank">View publication ↗</a></div>
+</article>
+<article class="city-ditty-publication-card" id="pub-city-ditty-2023">
+<span class="city-ditty-publication-type">Journal article · 2023</span>
+<h3>City Ditty: An Immersive Soundscape Sketchpad for Professionals of the Built Environment</h3>
+<p class="city-ditty-publication-summary">The first published evaluation of City Ditty, examining whether non-specialists could learn soundscape concepts, manipulate an interactive simulation, and produce simple soundscape designs.</p>
+<p class="city-ditty-publication-meta">Yanaky, R., Tyler, D., &amp; Guastavino, C. · <em>Applied Sciences</em>, 13(3), 1611</p>
+<div class="city-ditty-publication-actions"><a class="city-ditty-publication-link" href="https://doi.org/10.3390/app13031611" rel="noopener noreferrer" target="_blank">Read publication ↗</a></div>
+</article>
+<article class="city-ditty-publication-card" id="pub-professional-sketchpads-2023">
+<span class="city-ditty-publication-type">Conference paper · 2023</span>
+<h3>Exploring the Use of Soundscape Sketchpads with Professionals</h3>
+<p class="city-ditty-publication-summary">Reports early professional perspectives on interactive soundscape sketchpads and their potential roles in design, communication, and professional workflows.</p>
+<p class="city-ditty-publication-meta">Yanaky, R., Grazioli, G., Zhang, Y.-Y., &amp; Guastavino, C. · INTER-NOISE 2023 · Chiba, Japan</p>
+<div class="city-ditty-publication-actions"><a class="city-ditty-publication-link" href="https://www.researchgate.net/publication/374750772_Exploring_the_use_of_soundscape_sketchpads_with_professionals" rel="noopener noreferrer" target="_blank">View publication ↗</a></div>
+</article>
 </div>
-
+</section><p class="city-ditty-back-link"><a href="#explore-city-ditty">↑ Explore City Ditty</a></p></div>
 </div>
-    </div>
-  </main>
+</main>
 </body>
 </html>
